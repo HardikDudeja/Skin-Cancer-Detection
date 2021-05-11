@@ -59,5 +59,14 @@ We created a website that allows the user to upload an image of a mole and runs 
 
 # WORKING
 
+![Alt text](img5.png?raw=true "Title")
+![Alt text](img6.png?raw=true "Title")
+
+# MODELS AND THEIR ACCURACY
 ![Alt text](img1.png?raw=true "Title")
 ![Alt text](img2.png?raw=true "Title")
+![Alt text](img3.png?raw=true "Title")
+
+
+The accuracy of our model came out just above 94% which we feel is sufficient, but surely it can be improved.
+
