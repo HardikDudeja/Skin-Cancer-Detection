@@ -58,6 +58,11 @@ We created a website that allows the user to upload an image of a mole and runs 
 
 # WORKING
 
+1. As the website is not live yet, it can be run by executing the command 'python manage.py runserver'
+2. Users need to upload the images
+3. Choose the desired model
+4. Click submit
+
 ![Alt text](img5.png?raw=true)
 ![Alt text](img6.png?raw=true)
 
