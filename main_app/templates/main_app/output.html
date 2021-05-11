@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Skin Cancer Detection</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main_app/output.css' %}">
+</head>
+<body>
+    <div class="animated-background" id="blur">
+        <ul class="box-area">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <header>
+            <a class="logo">Skin Cancer Detection</a>
+            <ul>
+               <li><a href="{% url 'home' %}" class="active1">Home</a></li>
+                <li><a href="{% url 'plot' %}" class="active4">Plot</a></li>
+                <li><a href="{% url 'about' %}" class="active2">About</a></li>
+                <li><a href="{% url 'members' %}" class="active3">Members</a></li>
+            </ul>
+        </header>
+        <form class="rowg-3" method="POST" enctype="multipart/form-data">
+            <p id="image"><label for="id_image1">Image 1</label> <input type="file" name="image1" accept="image/"
+                    required="" id="id_image1" onchange="loadFile1(event)"
+                    style="background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%); border-radius: 15px; font-size: 12px; color: #fff;border: none;outline: none; width: 170px; height: 19px; cursor: pointer;">
+            </p>
+            <p id="out"><img id="output1" width="100px" height="100px"></p>
+            <p id="image"><label for="id_image2">Image 2</label> <input type="file" name="image2" accept="image/"
+                    id="id_image2" onchange="loadFile2(event)"
+                    style="background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%); border-radius: 15px; font-size: 12px; color: #fff;border: none;outline: none; width: 170px; height: 19px; cursor: pointer;">
+            </p>
+            <p id="out"><img id="output2" width="100px" height="100px"></p>
+            <p id="image"><label for="id_image3">Image 3</label> <input type="file" name="image3" accept="image/"
+                    id="id_image3" onchange="loadFile3(event)"
+                    style="background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%); border-radius: 15px; font-size: 12px; color: #fff;border: none;outline: none; width: 170px; height: 19px; cursor: pointer;">
+            </p>
+            <p id="out"><img id="output3" width="100px" height="100px"></p>
+            <p id="image"><label for="id_image4">Image 4</label> <input type="file" name="image4" accept="image/"
+                    id="id_image4" onchange="loadFile4(event)"
+                    style="background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%); border-radius: 15px; font-size: 12px; color: #fff;border: none;outline: none; width: 170px; height: 19px; cursor: pointer;">
+            </p>
+            <p id="out"><img id="output4" width="100px" height="100px"></p>
+            <p id="image"><label for="id_image5">Image 5</label> <input type="file" name="image5" accept="image/"
+                    id="id_image5" onchange="loadFile5(event)"
+                    style="background: linear-gradient(135deg, #3a8ffe 0%, #9658fe 100%); border-radius: 15px; font-size: 12px; color: #fff;border: none;outline: none; width: 170px; height: 19px; cursor: pointer;">
+            </p>
+            <p id="out"><img id="output5" width="100px" height="100px"></p>
+            <a>
+                <div class="col-auto">
+                    <input type="submit" value="Submit" class="submit-btn" onclick="toggle()">
+                </div>
+            </a>
+        </form>
+        <script>
+            var loadFile1 = function (event) {
+                var image1 = document.getElementById('output1');
+                image1.src = window.URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+        <script>
+            var loadFile2 = function (event) {
+                var image2 = document.getElementById('output2');
+                image2.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+        <script>
+            var loadFile3 = function (event) {
+                var image3 = document.getElementById('output3');
+                image3.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+        <script>
+            var loadFile4 = function (event) {
+                var image4 = document.getElementById('output4');
+                image4.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+        <script>
+            var loadFile5 = function (event) {
+                var image5 = document.getElementById('output5');
+                image5.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+    </div>
+    <div id="popup">
+        {% if img.image1 %}
+        <div class="out1">
+            <h2>Image 1</h2>
+            <img src="{{ img.image1.url}}" style="width: 80px; height: 80px;">
+            <p>{{input1_o}}</p>
+        </div>
+        {% endif %}
+
+        {% if img.image2 %}
+        <div class="out2">
+            <h2>Image 2</h2>
+            <img src="{{ img.image2.url}}" style="width: 80px; height: 80px;">
+            <p>{{input2_o}}</p>
+        </div>
+        {% endif %}
+
+        {% if img.image3 %}
+        <div class="out3">
+            <h2>Image 3</h2>
+            <img src="{{ img.image3.url}}" style="width: 80px; height: 80px;">
+            <p>{{input3_o}}</p>
+        </div>
+        {% endif %}
+
+        {% if img.image4 %}
+        <div class="out4">
+            <h2>Image 4</h2>
+            <img src="{{ img.image4.url}}" style="width: 80px; height: 80px;">
+            <p>{{input4_o}}</p>
+        </div>
+        {% endif %}
+
+        {% if img.image5 %}
+        <div class="out5">
+            <h2>Image 5</h2>
+            <img src="{{ img.image5.url}}" style="width: 80px; height: 80px;">
+            <p>{{input5_o}}</p>
+        </div>
+        {% endif %}
+
+        <a href="{% url 'home' %}" onclick="toggle()">Close</a>
+    </div>
+</body>
+</html>

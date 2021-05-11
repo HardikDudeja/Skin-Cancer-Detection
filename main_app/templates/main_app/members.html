@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members - Skin Cancer Detection</title>
+    <link rel="stylesheet" href="{% static 'main_app/members.css' %}">
+</head>
+<body>
+    <header>
+        <a class="logo">Skin Cancer Detection</a> 
+        <ul>
+            <li><a href="{% url 'home' %}" class="active1">Home</a></li>
+                <li><a href="{% url 'plot' %}" class="active4">Plot</a></li>
+                <li><a href="{% url 'about' %}" class="active2">About</a></li>
+                <li><a href="{% url 'members' %}" class="active3">Members</a></li>
+        </ul>
+    </header>
+    <div class="container">
+        <div class="card">
+            <div class="DP">
+                <img src="{% static 'main_app/images/Bhawan.jpg' %}" style="width: 200px; height: 265px;">
+            </div>
+            <div class="content">
+                <h2>1</h2>
+                <h3>Bhawan Gakhar</h3>
+                <p>2019417</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="DP">
+                <img src="{% static 'main_app/images/hardik.jpeg' %}" style="width: 200px; height: 265px;">
+            </div>
+            <div class="content">
+                <h2>2</h2>
+                <h3>Hardik Dudeja</h3>
+                <p>2019422</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="DP">
+                <img src="{% static 'main_app/images/harshit.JPG' %}" style="width: 200px; height: 265px;">
+            </div>
+            <div class="content">
+                <h2>3</h2>
+                <h3>Harshit Singh</h3>
+                <p>2019424</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="DP">
+                <img src="{% static 'main_app/images/kumud.png' %}" style="width: 200px; height: 265px;">
+            </div>
+            <div class="content">
+                <h2>4</h2>
+                <h3>Kumud Tayal</h3>
+                <p>2019429</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="DP">
+                <img src="{% static 'main_app/images/meet.jpg' %}" style="width: 200px; height: 265px;">
+            </div>
+            <div class="content">
+                <h2>5</h2>
+                <h3>Meet Modi</h3>
+                <p>2019435</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="DP">
+                <img src="{% static 'main_app/images/Riya.jpg' %}" style="width: 200px; height: 265px;">
+            </div>
+            <div class="content">
+                <h2>6</h2>
+                <h3>Riya Sogani</h3>
+                <p>2019442</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="DP">
+                <img src="{% static 'main_app/images/yash.png' %}" style="width: 200px; height: 265px;">
+            </div>
+            <div class="content">
+                <h2>7</h2>
+                <h3>Yash Verma</h3>
+                <p>2019456</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="{% static 'main_app/vanilla-tilt.js' %}"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"),{
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.7,
+        });
+    </script>
+</body>
+</html>

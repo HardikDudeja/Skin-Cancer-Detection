@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Skin Cancer Detection</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" type="text/css" href="{% static 'main_app/about.css'%}">
+</head>
+<body>
+    <header>
+        <a class="logo">Skin Cancer Detection</a> 
+        <ul>
+            <li><a href="{% url 'home' %}" class="active1">Home</a></li>
+            <li><a href="{% url 'plot' %}" class="active4">Plot</a></li>
+                <li><a href="{% url 'about' %}" class="active2">About</a></li>
+                <li><a href="{% url 'members' %}" class="active3">Members</a></li>   
+                
+        </ul>
+    </header>
+    <section>
+        <div class = "About">
+            <p>Skin Cancer is the most common kind of cancer globally. More than 2 people die of skin cancer every hour and about 9500 people are diagnosed with skin cancer everyday.<br>
+                Skin Cancer can greatly affect our quality of life or can be deadly in some cases.<br>
+                <br>
+                However, if detected early, skin cancer is almost 99 percent curable. <br>
+                <br>
+                The problem thus arises with the accessibility of skin cancer screenings. The cost for screening for skin cancer is extremely high -Upwards of Rs. 10,000 just for detection. For a common person in India, it is difficult to afford a skin cancer test due to lack of resources. Thus, most people end up testing for skin cancer once it is too late, and thus have to pay for treatment as well, which costs upwards of Rs. 7 Lakh. To make matters worse, national cancer costs are predicted to increase by 34% by 2030.<br>
+                <br>
+                In our project, we aim to cater to this need to detect skin cancer early by making it accessible to the common man. Hence, we can lessen the incredibly high number of preventable deaths due to skin cancer. <br>
+                <br>
+                This project is essentially a tool which takes an image of a mole as input and, through various manipulations and trained ML models, can predict whether a mole can be malign or not.<br>
+                <br>
+                Disclaimer:<br>
+                This tool has been designed only for educational purposes to demonstrate the use of Machine Learning tools in the medical field. This tool does not replace advice or evaluation by a medical professional. Nothing on this site should be construed as an attempt to offer a medical opinion or practice medicine.</p>
+        </div>
+    </section>
+    <img src="{% static 'main_app/images/About.svg' %}" style="width: 30%; height: 30%;">
+    <section>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </section>
+</body>
+</html>
